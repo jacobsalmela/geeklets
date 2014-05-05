@@ -1,6 +1,4 @@
-**BTC Donations**: `1NANWvtGH8u3bzwT17DgYfBqxbjjuQZKrx`
-
-**LTC Donations**: `LWpc6xfL2W9CH9Qse7Pci6CEvuSQUyEyD6`
+**BTC Donations**: `1DzPaoarz8pCV8wMg96hAGYgW2coJd798K`
 
 ## How it Works
 Each script is meant to be run as a separate geeklet.  Most are useful for "walk-by" information gathering.  The color codes quickly allow you to see if something is not correct. 
