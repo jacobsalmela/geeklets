@@ -12,4 +12,5 @@ if [[ -z "$port22detected" ]];then
     echo "\t✅ SSH"
 else
     echo "\t🔴 ${red}SSH!${end}"
+    afplay /Users/Shared/alert07.mp3
 fi

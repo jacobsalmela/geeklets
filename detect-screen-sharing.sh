@@ -12,4 +12,5 @@ if [[ -z "$port5900detected" ]];then
     echo "\t✅ VNC"
 else
     echo "\t🔴 ${red}VNC!${end}"
+    afplay /Users/Shared/alert07.mp3
 fi
