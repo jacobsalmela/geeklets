@@ -8,9 +8,22 @@ green="\x1b[032m"
 yellow="\x1b[033m"
 
 port22detected=$(netstat -p tcp | grep ssh)
+
+# The variable above works on any system, but as a side effect, detects both incoming and outgoing ssh sessions
+# If you want to detect only incoming ones, you need to add your IP into the command
+# If you feel comfortable with scripting, uncomment the necessary variables below
+
+#wifiOrAirport=$(/usr/sbin/networksetup -listallnetworkservices | grep -Ei '(Wi-Fi|AirPort)')
+#wirelessDevice=$(/usr/sbin/networksetup -listallhardwareports | awk "/$wifiOrAirport/,/Device/" | awk 'NR==2' | cut -d " " -f 2)
+#wirelessIP=$(ipconfig getifaddr $wirelessDevice)
+#wiredDevice=$(networksetup -listallhardwareports | grep -A 1 "Port: Ethernet" | sed -n 's/Device/&/p' | awk '{print $2}')
+#wiredIP=$(ipconfig getifaddr $wiredDevice) 2>/dev/null
+#port22detected=$(netstat -n | grep "$wirelessIP.ssh")
+#port22detected=$(netstat -n | grep "$wiredIP.ssh")
+
 if [[ -z "$port22detected" ]];then
     echo "\t✅ SSH"
 else
     echo "\t🔴 ${red}SSH!${end}"
-    afplay /Users/Shared/alert07.mp3
+    afplay /Users/Shared/alert07.mp3 
 fi
