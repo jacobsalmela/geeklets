@@ -21,6 +21,7 @@ yellow="\x1b[033m"
 
 # These should be all filled in after OAuth is set up
 # Instructions to do so are here: 
+# 			http://jacobsalmela.com/oauth-2-0-google-analytics-desktop-using-geektool-bash-curl/ 
 
 # API credentials
 clientID=""
@@ -29,7 +30,7 @@ redirectURI=""
 
 # OAuth tokens and codes
 # Get an authorization code
-#curl -s "https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fanalytics&redirect_uri=$redirectURI&response_type=code&client_id=$clientID"
+# https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fanalytics&redirect_uri=$redirectURI&response_type=code&client_id=$clientID
 authorizationCode=""
 
 # Once you have these two tokens, the script can run automatically. 
